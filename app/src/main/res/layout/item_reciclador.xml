@@ -9,15 +9,16 @@
 
     <TextView
         android:id="@+id/textViewNome"
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
         android:background="#EDE4E0"
         android:fontFamily="@font/baloo"
-        android:text="TextView"
+        android:gravity="center"
+        android:text="Nome"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#665A48"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,37 +26,89 @@
         android:id="@+id/textViewFone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="112dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/baloo"
-        android:text="TextView"
+        android:text="Telefone"
         android:textColor="#665A48"
-        app:layout_constraintStart_toEndOf="@+id/textViewNome"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNome" />
 
     <TextView
         android:id="@+id/textViewEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="150dp"
         android:fontFamily="@font/baloo"
-        android:text="TextView"
+        android:text="Email"
         android:textColor="#665A48"
-        app:layout_constraintStart_toEndOf="@+id/textViewNome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewFone"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNome" />
+
+    <TextView
+        android:id="@+id/textViewRua"
+        android:layout_width="255dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/baloo"
+        android:text="Rua"
+        android:textColor="#665A48"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewFone" />
 
     <TextView
-        android:id="@+id/textViewEndereço"
+        android:id="@+id/textViewNumero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="4dp"
+
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/baloo"
+        android:text="Numero"
+        android:textColor="#665A48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRua" />
+
+    <TextView
+        android:id="@+id/textViewCidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/baloo"
+        android:text="Cidade"
+        android:textColor="#665A48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNumero" />
+
+    <TextView
+        android:id="@+id/textViewCEP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/baloo"
+        android:text="CEP"
+        android:textColor="#665A48"
+        app:layout_constraintStart_toEndOf="@+id/textViewCidade"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNumero" />
+
+    <TextView
+        android:id="@+id/textViewCategorias"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
         android:layout_marginBottom="10dp"
         android:fontFamily="@font/baloo"
-        android:text="TextView"
+        android:text="Categorias"
         android:textColor="#665A48"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textViewNome"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEmail" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCidade" />
 </androidx.constraintlayout.widget.ConstraintLayout>

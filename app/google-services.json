@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "892082442682",
+    "project_id": "meulixo-bb2f5",
+    "storage_bucket": "meulixo-bb2f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:892082442682:android:e9bc9e024c0a5b843ccd83",
+        "android_client_info": {
+          "package_name": "com.example.meulixo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbGZIunnrtG2ZsPTSR-a_6HwfdhrthxmY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

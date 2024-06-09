@@ -21,5 +21,15 @@ public class LocalActivity extends AppCompatActivity {
             Intent intent = new Intent(this, CadastroActivity.class);
             startActivity(intent);
         });
+        buttonAtualizar = (Button) findViewById(R.id.buttonAtualizar);
+        buttonAtualizar.setOnClickListener(v -> {
+            Intent intent = new Intent(this, AtualizarActivity.class);
+            startActivity(intent);
+        });
+        buttonExcluir = (Button) findViewById(R.id.buttonExcluir);
+        buttonExcluir.setOnClickListener(v -> {
+            Intent intent = new Intent(this, ExcluirActivity.class);
+            startActivity(intent);
+        });
     }
 }

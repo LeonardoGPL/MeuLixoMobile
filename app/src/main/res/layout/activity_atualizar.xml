@@ -4,6 +4,303 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".AtualizarActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/baloo"
+                android:text="ATUALIZAÇÃO DE DADOS"
+                android:textAlignment="center"
+                android:textColor="#665A48"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textViewSub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/baloo"
+                android:text="DADOS PESSOAIS"
+                android:textAlignment="center"
+                android:textColor="#665A48"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textViewNome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="40dp"
+                android:text="Nome"
+                android:textColor="#7A7A7A" />
+
+            <EditText
+                android:id="@+id/editTextNome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:inputType="textCapSentences" />
+
+            <TextView
+                android:id="@+id/textViewEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:text="Email"
+                android:textColor="#7A7A7A" />
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/textViewSenha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:text="Senha"
+                android:textColor="#7A7A7A" />
+
+            <EditText
+                android:id="@+id/editTextSenha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:text="Telefone"
+                android:textColor="#7A7A7A" />
+
+            <EditText
+                android:id="@+id/editTextTelefone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:text="Rua"
+                android:textColor="#7A7A7A" />
+
+            <EditText
+                android:id="@+id/editTextRua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:inputType="textCapSentences" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:text="Número"
+                android:textColor="#7A7A7A" />
+
+            <EditText
+                android:id="@+id/editTextNumero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:text="CEP"
+                android:textColor="#7A7A7A" />
+
+            <EditText
+                android:id="@+id/editTextCep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:text="Cidade"
+                android:textColor="#7A7A7A" />
+
+            <EditText
+                android:id="@+id/editTextCidade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:inputType="textCapSentences" />
+
+            <TextView
+                android:id="@+id/textViewCategoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/baloo"
+                android:text="CATEGORIAS ACEITAS"
+                android:textAlignment="center"
+                android:textColor="#665A48"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxEletronico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/baloo"
+                android:text="Eletrônicos"
+                android:textColor="#7A7A7A" />
+
+            <CheckBox
+                android:id="@+id/checkBoxPilha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/baloo"
+                android:text="Pilhas e Baterias"
+                android:textColor="#7A7A7A" />
+
+            <CheckBox
+                android:id="@+id/checkBoxVestuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/baloo"
+                android:text="Vestuario"
+                android:textColor="#7A7A7A" />
+
+            <CheckBox
+                android:id="@+id/checkBoxMedicamentos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/baloo"
+                android:text="Medicamentos"
+                android:textColor="#7A7A7A" />
+
+            <CheckBox
+                android:id="@+id/checkBoxMoveis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/baloo"
+                android:text="Móveis"
+                android:textColor="#7A7A7A" />
+
+            <CheckBox
+                android:id="@+id/checkBoxOleo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/baloo"
+                android:text="Óleos"
+                android:textColor="#7A7A7A" />
+
+            <CheckBox
+                android:id="@+id/checkBoxPlastico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/baloo"
+                android:text="Plásticos"
+                android:textColor="#7A7A7A" />
+
+            <CheckBox
+                android:id="@+id/checkBoxEletrodomesticos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/baloo"
+                android:text="Eletrodomésticos"
+                android:textColor="#7A7A7A" />
+
+            <Button
+                android:id="@+id/buttonEnviar"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="15dp"
+                android:backgroundTint="#F0F0F0"
+                android:fontFamily="@font/baloo"
+                android:includeFontPadding="false"
+                android:text="ATUALIZAR"
+                android:textAlignment="center"
+                android:textColor="#7A7A7A"
+                android:textSize="20sp"
+                app:strokeColor="#7A7A7A"
+                app:strokeWidth="2dp" />
+
+            <Button
+                android:id="@+id/buttonVoltar"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#F0F0F0"
+                android:fontFamily="@font/baloo"
+                android:includeFontPadding="false"
+                android:text="VOLTAR"
+                android:textAlignment="center"
+                android:textColor="#7A7A7A"
+                android:textSize="20sp"
+                app:strokeColor="#7A7A7A"
+                app:strokeWidth="2dp" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
