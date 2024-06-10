@@ -103,14 +103,16 @@
                 android:text="Telefone"
                 android:textColor="#7A7A7A" />
 
-            <EditText
+            <com.vicmikhailau.maskededittext.MaskedEditText
                 android:id="@+id/editTextTelefone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="5dp"
                 android:ems="10"
-                android:inputType="number" />
+                android:inputType="number"
+                app:mask="(##) # ####-####"/>
+
 
             <TextView
                 android:id="@+id/textView6"
@@ -157,14 +159,15 @@
                 android:text="CEP"
                 android:textColor="#7A7A7A" />
 
-            <EditText
+            <com.vicmikhailau.maskededittext.MaskedEditText
                 android:id="@+id/editTextCep"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="5dp"
                 android:ems="10"
-                android:inputType="number" />
+                android:inputType="number"
+                app:mask="#####-###"/>
 
             <TextView
                 android:id="@+id/textView10"

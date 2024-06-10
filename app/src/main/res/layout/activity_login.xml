@@ -8,57 +8,99 @@
     android:background="@drawable/background"
     tools:context=".LoginActivity">
 
+
     <Button
         android:id="@+id/buttonLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#EDE4E0"
+        android:fontFamily="@font/baloo"
+        android:includeFontPadding="false"
         android:text="Login"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="636dp" />
+        android:textAlignment="center"
+        android:textColor="#9F8772"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonVoltar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="#9F8772"
+        app:strokeWidth="5dp" />
 
     <TextView
         android:id="@+id/textViewL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
         android:fontFamily="@font/baloo"
         android:text="LOGIN"
         android:textColor="#665A48"
-        tools:layout_editor_absoluteX="172dp"
-        tools:layout_editor_absoluteY="67dp" />
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textViewEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:text="Email:"
         android:textColor="#7A7A7A"
-        tools:layout_editor_absoluteX="64dp"
-        tools:layout_editor_absoluteY="125dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewL" />
 
     <EditText
         android:id="@+id/editTextEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:ems="10"
         android:inputType="text"
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="148dp" />
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEmail" />
 
     <TextView
         android:id="@+id/textViewSenha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:text="Senha:"
         android:textColor="#7A7A7A"
-        tools:layout_editor_absoluteX="63dp"
-        tools:layout_editor_absoluteY="223dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
 
     <EditText
         android:id="@+id/editTextSenha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:ems="10"
         android:inputType="textPassword"
-        tools:layout_editor_absoluteX="60dp"
-        tools:layout_editor_absoluteY="250dp" />
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSenha" />
+
+    <Button
+        android:id="@+id/buttonVoltar"
+        android:layout_width="150dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#EDE4E0"
+        android:fontFamily="@font/baloo"
+        android:includeFontPadding="false"
+        android:text="VOLTAR"
+        android:textAlignment="center"
+        android:textColor="#9F8772"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="#9F8772"
+        app:strokeWidth="5dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

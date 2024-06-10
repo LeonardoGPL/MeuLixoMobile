@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.widget.Button;
 
 public class LocalActivity extends AppCompatActivity {
-    Button  buttonVoltar,buttonCadastro,buttonAtualizar,buttonExcluir;
+    Button  buttonVoltar,buttonCadastro,buttonLogin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,14 +21,9 @@ public class LocalActivity extends AppCompatActivity {
             Intent intent = new Intent(this, CadastroActivity.class);
             startActivity(intent);
         });
-        buttonAtualizar = (Button) findViewById(R.id.buttonAtualizar);
-        buttonAtualizar.setOnClickListener(v -> {
-            Intent intent = new Intent(this, AtualizarActivity.class);
-            startActivity(intent);
-        });
-        buttonExcluir = (Button) findViewById(R.id.buttonExcluir);
-        buttonExcluir.setOnClickListener(v -> {
-            Intent intent = new Intent(this, ExcluirActivity.class);
+        buttonLogin = (Button) findViewById(R.id.buttonLogin);
+        buttonLogin.setOnClickListener(v -> {
+            Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
         });
     }

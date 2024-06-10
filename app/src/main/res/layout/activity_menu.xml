@@ -5,36 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".LocalActivity">
+    tools:context=".MenuActivity">
 
     <Button
-        android:id="@+id/buttonLogin"
+        android:id="@+id/buttonExcluir"
         android:layout_width="350dp"
         android:layout_height="80dp"
         android:layout_marginTop="20dp"
         android:backgroundTint="#EDE4E0"
         android:fontFamily="@font/baloo"
         android:includeFontPadding="false"
-        android:text="ATUALIZAR OU EXCLUIR"
+        android:text="EXCLUIR CADASTRO"
         android:textAlignment="center"
         android:textColor="#9F8772"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonCadastro"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAtualizar"
         app:strokeColor="#9F8772"
         app:strokeWidth="5dp" />
 
     <Button
-        android:id="@+id/buttonCadastro"
+        android:id="@+id/buttonAtualizar"
         android:layout_width="350dp"
         android:layout_height="80dp"
         android:layout_marginTop="250dp"
         android:backgroundTint="#EDE4E0"
         android:fontFamily="@font/baloo"
         android:includeFontPadding="false"
-        android:text="CADASTRAR LOCAL DE DESCARTE"
+        android:text="ATUALIZAR DADOS"
         android:textAlignment="center"
         android:textColor="#9F8772"
         android:textSize="18sp"
@@ -63,4 +63,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:strokeColor="#7A7A7A"
         app:strokeWidth="2dp" />
+
+    <TextView
+        android:id="@+id/textViewUser"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:fontFamily="@font/baloo"
+        android:gravity="center"
+        android:text="User"
+        android:textColor="#665A48"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -71,6 +71,7 @@ public class CadastroActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 salvarLocalDescarte();
+                finish();
             }
         });
     }
@@ -88,6 +89,7 @@ public class CadastroActivity extends AppCompatActivity {
         List<String> categorias = new ArrayList<>();
         if (checkBoxEletronico.isChecked()) categorias.add("Eletrônicos");
         if (checkBoxPilha.isChecked()) categorias.add("Pilhas e Baterias");
+        if (checkBoxVestuario.isChecked()) categorias.add("Vestuario");
         if (checkBoxMedicamentos.isChecked()) categorias.add("Medicamentos");
         if (checkBoxMoveis.isChecked()) categorias.add("Móveis");
         if (checkBoxOleo.isChecked()) categorias.add("Óleos");
