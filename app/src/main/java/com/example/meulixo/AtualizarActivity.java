@@ -3,12 +3,15 @@ package com.example.meulixo;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -142,11 +145,31 @@ public class AtualizarActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(AtualizarActivity.this, "Local atualizado com sucesso!", Toast.LENGTH_SHORT).show();
-                            finish();
+                            dialog();
                         } else {
                             Toast.makeText(AtualizarActivity.this, "Erro ao atualizar local.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
+    }
+    public void dialog(){
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.custom_dialog, null);
+        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+        dialog.setView(dialogView);
+
+        TextView tituloCustom = dialogView.findViewById(R.id.tituloCustom);
+        Button buttonCustom = dialogView.findViewById(R.id.buttonCustom);
+
+        tituloCustom.setText(" Local atualizado com sucesso!");
+        buttonCustom.setText("OK");
+
+        buttonCustom.setOnClickListener(v -> {
+            finish();
+        });
+
+        dialog.setCancelable(false);
+
+        dialog.create().show();
     }
 }

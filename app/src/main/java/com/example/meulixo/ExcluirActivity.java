@@ -3,10 +3,13 @@ package com.example.meulixo;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -15,32 +18,31 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class ExcluirActivity extends AppCompatActivity {
 
-    private EditText editTextNome,editTextEmail, editTextSenha;
-    private Button buttonExcluir;
+    private Button buttonExcluir,buttonVoltar;
     private FirebaseFirestore db;
     private String docId;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_excluir);
-
-        editTextNome = findViewById(R.id.editTextNome);
-        editTextEmail = findViewById(R.id.editTextEmail);
-        editTextSenha = findViewById(R.id.editTextSenha);
+        db = FirebaseFirestore.getInstance();
+        docId = getIntent().getStringExtra("docId");
         buttonExcluir = findViewById(R.id.buttonExcluir);
 
-        db = FirebaseFirestore.getInstance();
 
-        docId = getIntent().getStringExtra("docId");
-        editTextNome.setText(getIntent().getStringExtra("nome"));
-        editTextEmail.setText(getIntent().getStringExtra("email"));
-        editTextSenha.setText(getIntent().getStringExtra("senha"));
+        buttonVoltar = (Button) findViewById(R.id.buttonVoltar);
+        buttonVoltar.setOnClickListener(v -> {
+            finish();
+        });
+
 
         buttonExcluir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                excluirLocal();
+                dialog();
             }
         });
     }
@@ -58,5 +60,32 @@ public class ExcluirActivity extends AppCompatActivity {
                         }
                     }
                 });
+    }
+
+    public void dialog(){
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.custom_dialog_yn, null);
+        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+        dialog.setView(dialogView);
+
+        TextView tituloCustom = dialogView.findViewById(R.id.tituloCustom);
+        Button buttonYes = dialogView.findViewById(R.id.buttonYes);
+        Button buttonNo = dialogView.findViewById(R.id.buttonNo);
+
+        tituloCustom.setText(" Deseja Realmente Excluir seu Cadastro?");
+        buttonYes.setText("SIM");
+        buttonNo.setText("NÃO");
+
+        buttonYes.setOnClickListener(v -> {
+           excluirLocal();
+        });
+
+        buttonNo.setOnClickListener(v -> {
+            finish();
+        });
+
+        dialog.setCancelable(false);
+
+        dialog.create().show();
     }
 }

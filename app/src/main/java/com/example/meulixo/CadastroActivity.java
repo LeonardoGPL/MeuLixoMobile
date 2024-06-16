@@ -3,17 +3,22 @@ package com.example.meulixo;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.Patterns;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.meulixo.models.LocalDescarte;
@@ -32,7 +37,8 @@ import java.util.Map;
 public class CadastroActivity extends AppCompatActivity {
     FirebaseFirestore db;
     FirebaseAuth auth;
- Button buttonVoltar,buttonEnviar;
+    Button buttonVoltar,buttonEnviar;
+    ProgressBar progressBar;
 
  EditText editTextNome,editTextEmail,editTextTelefone,editTextRua,editTextNumero,editTextCep,editTextCidade,editTextSenha;;
 
@@ -41,6 +47,8 @@ public class CadastroActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
+
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
         buttonVoltar = (Button) findViewById(R.id.buttonVoltar);
         buttonVoltar.setOnClickListener(v -> {
@@ -71,7 +79,7 @@ public class CadastroActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 salvarLocalDescarte();
-                finish();
+
             }
         });
     }
@@ -122,10 +130,11 @@ public class CadastroActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(CadastroActivity.this, "Local cadastrado com sucesso!", Toast.LENGTH_SHORT).show();
+                            dialog();
                         } else {
                             Toast.makeText(CadastroActivity.this, "Erro ao cadastrar local.", Toast.LENGTH_SHORT).show();
                         }
+
                     }
                 });
 
@@ -154,9 +163,30 @@ public class CadastroActivity extends AppCompatActivity {
                                     Toast.LENGTH_SHORT).show();
 
                         }
+
                     }
                 });
 
     }
-}
 
+    public void dialog(){
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.custom_dialog, null);
+        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+        dialog.setView(dialogView);
+
+        TextView tituloCustom = dialogView.findViewById(R.id.tituloCustom);
+        Button buttonCustom = dialogView.findViewById(R.id.buttonCustom);
+
+        tituloCustom.setText(" Cadastro Realizado Com Sucesso!");
+        buttonCustom.setText("OK");
+
+        buttonCustom.setOnClickListener(v -> {
+            finish();
+        });
+
+        dialog.setCancelable(false);
+
+        dialog.create().show();
+    }
+}

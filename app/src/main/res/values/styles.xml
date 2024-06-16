@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomDialogTheme" parent="Theme.AppCompat.Dialog">
+        <item name="android:background">#EDE4E0</item>
+        <item name="android:textColor">#9F8772</item>
+        <item name="android:strokeLineCap">round</item>
+        <item name="android:button">@color/dialogButtonB</item>
+
+        <!-- Adicione mais personalizações aqui -->
+    </style>
+</resources>

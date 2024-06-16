@@ -272,6 +272,15 @@
                 android:text="Eletrodomésticos"
                 android:textColor="#7A7A7A" />
 
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="@android:style/Widget.ProgressBar.Large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="30dp"
+                android:visibility="gone" />
+
             <Button
                 android:id="@+id/buttonEnviar"
                 android:layout_width="match_parent"

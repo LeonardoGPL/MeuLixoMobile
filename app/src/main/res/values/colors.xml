@@ -6,6 +6,10 @@
     <color name="brown">#9F8772</color>
     <color name="brownP">#FF887461</color>
     <color name="whiteB">#EDE4E0</color>
-
+    <!--Dialog -->
+    <color name="dialogStroke">#9F8772</color>
+    <color name="dialogBack">#EDE4E0</color>
+    <color name="dialogButtonT">#7A7A7A</color>
+    <color name="dialogButtonB">#F0F0F0</color>
 
 </resources>
